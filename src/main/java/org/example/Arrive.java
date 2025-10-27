@@ -131,8 +131,8 @@ public class Arrive {
 
                     long chatId1 = 1586002925L; //max
 
-                    if (CurlToJava.getStates().contains(fromState) & equipmentType.startsWith("V") & isHazmat.equals("false") & dropTrailer.equals("false") & weight<40000){
-                            CurlToJava.enterItToDBandSendToBot(exists, loadId, totalMiles, pickupApptEarliest,deliveryApptLatest, fromCity, fromState, toCity, toState, chatId1);
+                    if (USPS.getStates().contains(fromState) & equipmentType.startsWith("V") & isHazmat.equals("false") & dropTrailer.equals("false") & weight<40000){
+                            USPS.enterItToDBandSendToBot(exists, loadId, totalMiles, pickupApptEarliest,deliveryApptLatest, fromCity, fromState, toCity, toState, chatId1);
                     }
 
                 }

@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class CurlToJava {
+public class USPS {
 
      static void main(String[] args) {
 
@@ -126,7 +126,7 @@ public class CurlToJava {
     }
 
     static List<String> getStates() {
-        final List<String> stateList = List.of("NE","IL","IN");
+        final List<String> stateList = List.of("VA","AZ","CA","MN","PA","NJ","TX");
         return stateList;
     }
 
