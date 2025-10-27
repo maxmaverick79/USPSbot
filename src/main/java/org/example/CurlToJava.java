@@ -74,8 +74,21 @@ public class CurlToJava {
 
                 int totalMiles = load.getInt("total_miles");
 
-                String pickupDatetime = decreaseDatetime(load.getString("pick_up_datetime"));
-                String deliveryDatetime = decreaseDatetime(load.getString("delivery_datetime"));
+                String pickupDatetime = null;
+                if (!load.isNull("pick_up_datetime")) {
+                    pickupDatetime = decreaseDatetime(load.getString("pick_up_datetime"));
+                } else if (!load.isNull("pickup_start_datetime")) {
+                    pickupDatetime = decreaseDatetime(load.getString("pickup_start_datetime"));
+                }
+
+
+                String deliveryDatetime = null;
+                if (!load.isNull("delivery_datetime")) {
+                    deliveryDatetime = decreaseDatetime(load.getString("delivery_datetime"));
+                } else if (!load.isNull("delivery_start_datetime")) {
+                    deliveryDatetime = decreaseDatetime(load.getString("delivery_start_datetime"));
+                }
+
 
                 JSONArray stops = load.getJSONArray("stops");
 
@@ -113,7 +126,7 @@ public class CurlToJava {
     }
 
     static List<String> getStates() {
-        final List<String> stateList = List.of("MI","OH","IN","KY");
+        final List<String> stateList = List.of("NE","IL","IN");
         return stateList;
     }
 
