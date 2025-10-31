@@ -109,7 +109,7 @@ public class USPS {
                 boolean exists = DatabaseConnection.checkLoadIdExists(loadId);
                 long chatId1 = 1586002925L;
                 long chatId2 = 1287858101L;
-                long chatId3 = 7898072414L;
+                long chatId3 = 7898072414L; // felix
 
                 final List<String> stateList = getStates();
 
@@ -126,7 +126,7 @@ public class USPS {
     }
 
     static List<String> getStates() {
-        final List<String> stateList = List.of("VA","AZ","CA","MN","PA","NJ","TX");
+        final List<String> stateList = List.of("KS","MO","PA","NJ","MD","CA");
         return stateList;
     }
 
