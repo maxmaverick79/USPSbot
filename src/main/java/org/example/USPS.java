@@ -76,17 +76,21 @@ public class USPS {
 
                 String pickupDatetime = null;
                 if (!load.isNull("pick_up_datetime")) {
-                    pickupDatetime = decreaseDatetime(load.getString("pick_up_datetime"));
+                    pickupDatetime = load.getString("pick_up_datetime");
+//                    pickupDatetime = decreaseDatetime(load.getString("pick_up_datetime"));
                 } else if (!load.isNull("pickup_start_datetime")) {
-                    pickupDatetime = decreaseDatetime(load.getString("pickup_start_datetime"));
+                    pickupDatetime = load.getString("pickup_start_datetime");
+//                    pickupDatetime = decreaseDatetime(load.getString("pickup_start_datetime"));
                 }
 
 
                 String deliveryDatetime = null;
                 if (!load.isNull("delivery_datetime")) {
-                    deliveryDatetime = decreaseDatetime(load.getString("delivery_datetime"));
+//                    deliveryDatetime = decreaseDatetime(load.getString("delivery_datetime"));
+                    deliveryDatetime =load.getString("delivery_datetime");
                 } else if (!load.isNull("delivery_start_datetime")) {
-                    deliveryDatetime = decreaseDatetime(load.getString("delivery_start_datetime"));
+                    deliveryDatetime = load.getString("delivery_start_datetime");
+//                    deliveryDatetime = decreaseDatetime(load.getString("delivery_start_datetime"));
                 }
 
 
@@ -126,7 +130,8 @@ public class USPS {
     }
 
     static List<String> getStates() {
-        final List<String> stateList = List.of("KS","MO","PA","NJ","MD","CA");
+        final List<String> stateList = List.of(
+                "PA", "NJ", "MD", "VA", "DE", "NY", "GA", "NC", "SC","AL");
         return stateList;
     }
 

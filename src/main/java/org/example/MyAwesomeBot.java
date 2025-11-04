@@ -152,7 +152,7 @@ public class MyAwesomeBot extends TelegramLongPollingBot {
         String datePart = zonedDateTime.toLocalDate().toString();
         String timePart = zonedDateTime.toLocalTime().toString();
 
-         Instant instant1 = Instant.parse(delivery);
+         Instant instant1 = Instant.parse(pickup);
          ZonedDateTime zonedDateTime1 = instant1.atZone(ZoneId.of("UTC"));
          String datePart1 = zonedDateTime1.toLocalDate().toString();
          String timePart1 = zonedDateTime1.toLocalTime().toString();
