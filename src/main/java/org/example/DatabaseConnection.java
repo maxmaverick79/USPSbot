@@ -6,6 +6,8 @@ public class DatabaseConnection {
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String USER = "postgres";
     private static final String PASSWORD = "1212";
+    public static final String TABLE_LOAD_LIST = "loadList";
+    public static final String TABLE_USPS_LOAD_LIST = "USPSLoadList";
 
     // Prevent instantiation
     private DatabaseConnection() {}

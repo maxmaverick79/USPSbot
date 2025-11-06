@@ -131,7 +131,8 @@ public class USPS {
 
     static List<String> getStates() {
         final List<String> stateList = List.of(
-                "PA", "NJ", "MD", "VA", "DE", "NY", "GA", "NC", "SC","AL");
+                "AZ" ,"NJ","PA","CA"
+        );
         return stateList;
     }
 

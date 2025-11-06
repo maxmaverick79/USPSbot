@@ -21,9 +21,10 @@ import static org.example.USPS.getStates;
 public class GurmanApiRequest {
 
     private static final String API_URL =
-            "https://api.gurmanlogistics.com/api/loads/paginated?page_size=0&page=1&statuses=active";
+            "https://api.gurmanlogistics.com/api/loads/paginated?page_size=10&page=1&statuses=active";
     private static final String BEARER_TOKEN =
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbGVzQGdvbGR0cmVldHJhbnNpbmMuY29tIiwiZXhwIjoxNzYyMzQ2Mjc0LCJpYXQiOjE3NjIyNTk4NzQsInVzZXJfaWQiOiJjMzk5OGZlZC0zNDgwLTQ1MjUtODc0ZS1hNjhlOTBlMzI4MDYiLCJ1c2VyX3R5cGUiOiJ1c2VyIn0.BTrqx3G6REzLf1d7w1DGxu9nzcQwVoiMPGaAiK7jkMw";
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbGVzQGdvbGR0cmVldHJhbnNpbmMuY29tIiwiZXhwIjoxNzYyNTQ4MDEwLCJpYXQiOjE3NjI0NjE2MTAsInVzZXJfaWQiOiJjMzk5OGZlZC0zNDgwLTQ1MjUtODc0ZS1hNjhlOTBlMzI4MDYiLCJ1c2VyX3R5cGUiOiJ1c2VyIn0.K3W_YUPwsz-aDUO3XjLfpfuN07Ve0LZ3I1qtVv4ft20";
+
 
     public static void main(String[] args) {
         ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
